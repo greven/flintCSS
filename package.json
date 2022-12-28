@@ -1,29 +1,37 @@
 {
   "name": "flintcss",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "flintCSS - Tailwind CSS based components library",
   "author": "Nuno Freire",
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
-    "start": "tailwindcss -i ./src/main.css -o ./dist/styles.css --watch"
+    "start": "",
+    "build": "concurrently npm:build:*",
+    "build:components": "postcss --config src/components src/components/index.css -o dist/components.css"
   },
   "keywords": [
     "css",
     "tailwind",
-    "components"
+    "components",
+    "library",
+    "ui"
   ],
-  "peerDependencies": {
-    "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.20"
-  },
+  "browserslist": [
+    "defaults"
+  ],
   "dependencies": {
+    "autoprefixer": "^10.4.13",
     "tailwindcss": "^3.2"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.13",
+    "concurrently": "^7.6.0",
+    "css-tree": "^2.3.1",
+    "lightningcss-cli": "^1.17.1",
     "postcss-cli": "^10.1.0",
-    "postcss-preset-env": "^7.8.3",
-    "prettier": "^2.7.1"
+    "postcss-import": "^15.1.0",
+    "postcss-nesting": "^10.2.0",
+    "prettier": "^2.8.1",
+    "prettier-plugin-tailwindcss": "^0.2.1"
   }
 }

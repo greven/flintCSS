@@ -1,9 +1,8 @@
-const plugin = require("tailwindcss/plugin")
+const plugin = require('tailwindcss/plugin')
+const components = require('../dist/components')
 
-module.exports = {
-  plugins: [
-    plugin(function ({ addBase, addUtilities, addComponents, config }) {
-      // Add your custom styles here
-    }),
-  ],
+const mainFunction = ({ addBase, addUtilities, addComponents, config }) => {
+  addComponents(components)
 }
+
+module.exports = plugin(mainFunction, {})

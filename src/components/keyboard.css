@@ -1,0 +1,8 @@
+/* ---- Keyboard Components ---- */
+
+.kbd {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  user-select: none;
+}

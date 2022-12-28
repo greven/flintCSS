@@ -1,0 +1,11 @@
+/* ---- Button Components ---- */
+
+.btn {
+  background-color: red;
+  font-weight: theme(fontWeight.semibold);
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: green;
+  }
+}
