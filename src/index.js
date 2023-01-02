@@ -1,7 +1,7 @@
 const plugin = require('tailwindcss/plugin')
 const components = require('../dist/components')
 
-const mainFunction = ({ addBase, addUtilities, addComponents, config }) => {
+const mainFunction = ({ addComponents }) => {
   addComponents(components)
 }
 

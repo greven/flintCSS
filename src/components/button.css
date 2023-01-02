@@ -1,11 +1,30 @@
 /* ---- Button Components ---- */
 
 .btn {
-  background-color: red;
+  color: theme(colors.white);
+  background-color: theme(colors.slate.900);
   font-weight: theme(fontWeight.semibold);
-  text-transform: uppercase;
+  border-radius: theme(borderRadius.lg);
+  text-transform: capitalize;
+  padding: 12px 24px;
 
   &:hover {
-    background-color: green;
+    background-color: theme(colors.slate.700);
+  }
+}
+
+@keyframes mymove {
+  from {
+    top: 0px;
+  }
+
+  to {
+    top: 200px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
   }
 }
